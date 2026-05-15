@@ -1,1 +1,1 @@
-console.log('test app v1');
+console.log('v2');
