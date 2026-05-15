@@ -1,0 +1,11 @@
+name: hello-world
+version: 1.0.0
+description: Hello World 示例应用
+
+start:
+  command: python3 -m http.server 3000
+
+routes:
+  - path: /
+    target: http://localhost:3000
+    strip_prefix: false
