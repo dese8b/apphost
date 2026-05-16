@@ -1,0 +1,27 @@
+#!/bin/bash
+# 重新加载应用配置
+
+WORKROOT="${WORKROOT:-/tmp/workroot}"
+SUPERVISOR_CONF="$WORKROOT/supervisor/supervisord.conf"
+
+echo "==> 重新生成应用配置..."
+
+# 重新生成 Supervisor 配置
+if [ -f "$WORKROOT/scripts/generate-app-configs.py" ]; then
+  python3 "$WORKROOT/scripts/generate-app-configs.py"
+else
+  echo "[Error] generate-app-configs.py not found"
+  exit 1
+fi
+
+echo "==> 重新加载 Supervisor..."
+supervisorctl -c "$SUPERVISOR_CONF" reread
+supervisorctl -c "$SUPERVISOR_CONF" update
+
+echo "==> 重启 proxy（加载新路由）..."
+supervisorctl -c "$SUPERVISOR_CONF" restart proxy
+
+echo "✓ 应用配置已重新加载"
+echo ""
+echo "当前运行的应用："
+supervisorctl -c "$SUPERVISOR_CONF" status | grep "^app-"
