@@ -1,0 +1,16 @@
+{
+  "namespace": "ns-1779359079",
+  "app": "cc-link-1779359079",
+  "repo": "https://github.com/dese8b/apphost.git",
+  "token": "",
+  "token_encrypted": false,
+  "subpath": "apps/ns-1779359079/cc-code-1779359079",
+  "versions": {
+    "1.0.0": {
+      "ref": "e660fa6f6d2f8027cbeab5884caa564042cdcab6",
+      "ref_type": "commit",
+      "ref_name": "main",
+      "subpath": "apps/ns-1779359079/cc-code-1779359079"
+    }
+  }
+}
