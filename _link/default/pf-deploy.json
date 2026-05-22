@@ -1,0 +1,16 @@
+{
+  "namespace": "default",
+  "app": "pf-deploy",
+  "repo": "https://github.com/rally82-2/pf-deploy.git",
+  "token": "06180037093c0518107e1d7b601d1d3c0210584155395117511c463c2e3b177710021f786413563c",
+  "token_encrypted": true,
+  "subpath": "",
+  "versions": {
+    "0.1.0": {
+      "ref": "97cc6aaa8920652efd1bcbc419b21beb8b9c86fd",
+      "ref_type": "commit",
+      "ref_name": "master",
+      "token": "06180037093c0518107e1d7b601d1d3c0210584155395117511c463c2e3b177710021f786413563c"
+    }
+  }
+}
